@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CITE Technical Institute Inc. - Public School Website (Frontend)
+
+This is the frontend-only Next.js application for **CITE Technical Institute Inc.**. It is designed to showcase essential information about the school, including details on programs, events, and news. The website is hosted on Vercel for easy deployment and access.
+
+## Tech Stack
+
+- **Frontend**:
+  - **Next.js**: React framework for building the website, including static site generation (SSG) and server-side rendering (SSR).
+  - **Tailwind CSS**: Utility-first CSS framework for styling.
+  - **TypeScript**: For type safety and better development experience.
+  - **pnpm**: Fast and efficient package manager.
+  - **Node.js**:
+    - Version: **Node 22** for running the project.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get the project up and running locally for development.
+
+### Prerequisites
+
+Ensure that you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 22 or above)
+- [pnpm](https://pnpm.io/) (recommended package manager for better performance)
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/D3c1pher/cite-school-web.git
+cd cite-school-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the dependencies using pnpm:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Running the Development Server
 
-## Learn More
+Start the development server with:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Access the app at [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Building for Production
 
-## Deploy on Vercel
+To build the application for production, run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Running in Production Mode Locally
+
+You can test the production build locally by running:
+
+```bash
+pnpm start
+```
+
+## Directory Structure
+
+🗂️ _This section will be added soon to outline the project's folder layout._
+
+## Screenshots / Previews
+
+📸 _Visual previews of the site will be added here soon._
+
+## License
+
+🚫 **This project is not open source.**  
+The source code is temporarily public for **portfolio purposes only**.  
+Use or distribution outside of **CITE Technical Institute Inc.** is not permitted.
+
+## Contact
+
+For any questions or inquiries regarding the website, feel free to contact:
+
+- 📧 **Email**: [norven.caracas@gmail.com](mailto:norven.caracas@gmail.com)
+- 🐙 **GitHub**: [@D3c1pher](https://github.com/D3c1pher)

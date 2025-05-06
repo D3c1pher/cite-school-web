@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+echo "🚀 Running pre-push checks..."
+
+pnpm run lint 
+pnpm run format
+
+echo "✅ Lint and format passed. Proceeding with push."
