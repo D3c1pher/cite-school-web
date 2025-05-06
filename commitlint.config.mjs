@@ -2,8 +2,8 @@ export default {
   extends: [],
   rules: {
     "header-max-length": [2, "always", 50],
-    "header-case-start-capital": [2, "always"],
-    "header-end-period": [2, "always"],
+    "header-case": [2, "always", "sentence-case"],
+    "header-full-stop": [2, "never", "."],
   },
   plugins: [
     {
@@ -19,9 +19,6 @@ export default {
             /^[A-Z]/.test(header),
             "Commit message must start with a capital letter",
           ];
-        },
-        "header-end-period": ({ header }) => {
-          return [/\.$/.test(header), "Commit message must end with a period"];
         },
       },
     },
