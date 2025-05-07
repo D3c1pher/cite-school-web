@@ -5,7 +5,7 @@ echo "📄 Commit file: $1"
 echo "-----------------------------"
 
 if pnpm exec commitlint --edit "$1"; then
-  echo "✅ Commit message is valid!"
+  echo "✅ Commit message is valid. 🎉 You’re all set — commit complete!"
 else
   echo "❌ Commit message is invalid. Please follow the commit message conventions."
   exit 1
