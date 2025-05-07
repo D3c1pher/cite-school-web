@@ -1,0 +1,17 @@
+@layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .transition-default {
+    transition: all 300ms ease-in-out;
+  }
+}
+
+/* 
+  Note to self:
+  - Use fluid texts ex. text-[min(10vw, 70px)] // try to figure how this works
+  - Make use of prefixes that lessen js code. // Make use of documentation
+*/
