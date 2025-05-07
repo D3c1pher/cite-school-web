@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { ReduxProvider } from "@/store/ReduxProvider";
 import { Header, Footer } from "@/components";
+import ThemeInitializer from "@/providers/ThemeInitializer";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -17,12 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ReduxProvider>
+      <ThemeInitializer />
+      <html lang="en">
+        <body>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ReduxProvider>
   );
 }

@@ -5,4 +5,9 @@ echo "🚀 Running pre-push checks..."
 pnpm run lint 
 pnpm run format
 
-echo "✅ Lint and format passed. Proceeding with push."
+if [ $? -eq 0 ]; then
+  echo "✅ Lint and format passed. Proceeding with push."
+else
+  echo "❌ Pre-push checks failed. Please fix the issues before pushing."
+  exit 1
+fi
