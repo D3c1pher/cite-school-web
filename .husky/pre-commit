@@ -1,16 +1,37 @@
 #!/usr/bin/env sh
 
 echo "🧹 Running pre-commit checks..."
+echo "📍 Current working directory: $(pwd)"
+echo "-----------------------------"
 
-echo "Current working directory: $(pwd)"
-
-pnpm run type-check
-pnpm run lint 
-pnpm run format
-
-if [ $? -eq 0 ]; then
-  echo "✅ Pre-commit checks passed successfully!"
+# Type Check
+echo "🔎 Running TypeScript type check..."
+if pnpm run type-check; then
+  echo "✅ Type check passed!"
 else
-  echo "❌ Pre-commit checks failed. Please fix the issues and try again."
+  echo "❌ Type check failed. Please fix the type errors."
   exit 1
 fi
+
+# Lint
+echo "-----------------------------"
+echo "🧠 Running linter..."
+if pnpm run lint; then
+  echo "✅ Lint passed!"
+else
+  echo "❌ Lint failed. Please fix lint errors."
+  exit 1
+fi
+
+# Format
+echo "-----------------------------"
+echo "🎨 Checking code formatting..."
+if pnpm run format; then
+  echo "✅ Format passed!"
+else
+  echo "❌ Format issues found. Please format your code."
+  exit 1
+fi
+
+echo "-----------------------------"
+echo "🎉 All pre-commit checks passed. You're good to go!"

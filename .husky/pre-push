@@ -1,13 +1,25 @@
 #!/usr/bin/env sh
 
 echo "🚀 Running pre-push checks..."
+echo "🔎 Running lint and format validation..."
+echo "----------------------------------------"
 
-pnpm run lint 
-pnpm run format
-
-if [ $? -eq 0 ]; then
-  echo "✅ Lint and format passed. Proceeding with push."
+echo "🔎 Linting code..."
+if pnpm run lint; then
+  echo "✅ Lint passed!"
 else
-  echo "❌ Pre-push checks failed. Please fix the issues before pushing."
+  echo "❌ Lint failed. Please fix the issues before pushing."
   exit 1
 fi
+
+echo "-----------------------------"
+echo "🧼 Formatting code..."
+if pnpm run format; then
+  echo "✅ Format passed!"
+else
+  echo "❌ Format check failed. Please format your code before pushing."
+  exit 1
+fi
+
+echo "-----------------------------"
+echo "🎉 All pre-push checks passed. You're good to go!"

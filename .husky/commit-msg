@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 
 echo "🔍 Validating commit message..."
+echo "📄 Commit file: $1"
+echo "-----------------------------"
 
-pnpm exec commitlint --edit "$1"
-
-if [ $? -eq 0 ]; then
-  echo "✅ Commit message is valid."
+if pnpm exec commitlint --edit "$1"; then
+  echo "✅ Commit message is valid!"
 else
   echo "❌ Commit message is invalid. Please follow the commit message conventions."
   exit 1
