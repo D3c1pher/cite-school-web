@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ReduxProvider } from "@/store/ReduxProvider";
 import { Header, Footer } from "@/components";
 import ThemeInitializer from "@/providers/ThemeInitializer";
-import "@/styles/globals.css";
+import "@/styles/index.css";
 
 export const metadata: Metadata = {
   title: {
