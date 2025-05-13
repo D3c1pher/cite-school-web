@@ -1,13 +1,5 @@
-@layer utilities {
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .transition-default {
-    transition: all 300ms ease-in-out;
-  }
+@utility transition-default {
+  transition: all 300ms ease-in-out;
 }
 
 /* 
