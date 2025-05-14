@@ -12,7 +12,7 @@ const Footer = () => {
       <div>
         {/* Logo Image */}
         <Link href="/">
-          <img src="/cite-logo-text-wht.png" alt="CITE Logo" />
+          <img src="/images/cite-logo-text-wht.png" alt="CITE Logo" />
         </Link>
 
         <div>
