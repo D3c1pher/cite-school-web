@@ -26,6 +26,10 @@
   --color-accent-dark: #ffb902;
   --color-accent-light: #fee102;
 
+  /* Color Socials */
+  --color-facebook: #3b5999;
+  --color-linkedin: #0077b5;
+
   /* ===== Spacing unit (1 px) ===== */
   --spacing: 0.25rem;
 
