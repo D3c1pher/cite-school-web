@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { navLinks } from "@/data";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
@@ -13,10 +14,14 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap justify-around md:flex-row-reverse">
         {/* Logo Image */}
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="/images/cite-logo-text-wht.png"
             alt="CITE Logo"
-            className="pointer-events-none h-24 w-auto select-none md:h-28 lg:h-32"
+            width={0}
+            height={80}
+            className="drop-shadow-image pointer-events-none h-24 w-auto object-contain select-none md:h-28 lg:h-32"
+            sizes="(min-width: 1024px) 326px, (min-width: 768px) 200px, (min-width: 640px) 180px, 160px"
+            priority
           />
         </Link>
 
